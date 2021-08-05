@@ -1,0 +1,23 @@
+DATA:t_ztbfi831 type table of ztbfi831,
+     w_ztbfi831 type ztbfi831.
+
+SELECT *
+        FROM ztbfi831
+        INTO TABLE t_ztbfi831.
+
+WRITE:10 'Trib:' ,'|' .
+WRITE:22 'Trib:' ,'|' .
+uline.
+new-line.
+LOOP AT t_ztbfi831 INTO w_ztbfi831.
+new-line.
+WRITE: 12 w_ztbfi831-atrib ,'|'.
+WRITE: 24 w_ztbfi831-atrib ,'|'.
+uline.
+
+ENDLOOP.
+
+IF sy-subrc = 0.
+
+
+ENDIF.
